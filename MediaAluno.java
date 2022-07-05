@@ -4,15 +4,18 @@ public class MediaAluno{
 
     Scanner media = new Scanner(System.in);
 
-    float Nota1;
-    float Nota2;
+    float NotaTrabalho;
+    float NotaProva;
     float Nota3;
     float MediaFinal;
+    float PesoTrabalho;
+    float PesoProva;
+    float PesoNota3;
 
     float Status(){
         System.out.println("Média do Aluno: ");
-        System.out.println("Primeira Nota: " +this.Nota1);
-        System.out.println("Segunda Nota: " +this.Nota2);
+        System.out.println("Nota do Trabalho: " +this.NotaTrabalho);
+        System.out.println("Nota da Prova: " +this.NotaProva);
         System.out.println("Terceira Nota: " +this.Nota3);
         System.out.println("Média final: " +this.MediaFinal);
         System.out.println("=======");
@@ -21,28 +24,28 @@ public class MediaAluno{
         System.exit(0);
       }
       
-    if (Nota1 == 0){
+    if (NotaTrabalho == 0){
       System.out.println("Deseja atualizar a primeira nota do aluno? Caso sim, digite 1, caso não, digite 2");
       int Alterar1 = media.nextInt();
 
       if (Alterar1 == 1){
         System.out.println("Digite a nova nota");
         int NovaNota1 = media.nextInt();
-        Nota1 = NovaNota1;
+        NotaTrabalho = NovaNota1;
       }
       else 
         if (Alterar1 == 2){
           System.out.println("A nota não foi alterada");
         }
     }
-    if (Nota2 == 0){
+    if (NotaProva == 0){
       System.out.println("Deseja atualizar a segunda nota do aluno? Caso sim, digite 1, caso não, digite 2");
       int Alterar2 = media.nextInt();
 
       if (Alterar2 == 1){
         System.out.println("Digite a nova nota");
         int NovaNota2 = media.nextInt();
-        Nota2 = NovaNota2 ;
+        NotaProva = NovaNota2 ;
       }
       else 
         if (Alterar2 == 2){
@@ -63,7 +66,23 @@ public class MediaAluno{
           System.out.println("A nota não foi alterada");
         }
     }
-      MediaFinal = (Nota1 + Nota2 + Nota3) / 3;
+
+    System.out.println("Informe o peso de cada nota");
+
+    float NovoPesoTrabalho = media.nextFloat();
+    float NovoPesoProva = media.nextFloat();
+    float NovoPesoNota3 = media.nextFloat();
+
+    PesoTrabalho = NovoPesoTrabalho;
+    PesoProva = NovoPesoProva;
+    PesoNota3 = NovoPesoNota3;
+
+    NotaTrabalho = NotaTrabalho * PesoTrabalho;
+    NotaProva = NotaProva * PesoProva;
+    Nota3 = Nota3 * PesoNota3;
+      
+      
+      MediaFinal = (NotaTrabalho + NotaProva + Nota3);
       
       return Status();
       
