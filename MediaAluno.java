@@ -31,7 +31,7 @@ public class MediaAluno{
 
       if (Alterar1 == 1){
         System.out.println("Digite a nova nota");
-        int NovaNota1 = media.nextInt();
+        float NovaNota1 = media.nextFloat();
         NotaTrabalho = NovaNota1;
       }
       else 
@@ -45,7 +45,7 @@ public class MediaAluno{
 
       if (Alterar2 == 1){
         System.out.println("Digite a nova nota");
-        int NovaNota2 = media.nextInt();
+        float NovaNota2 = media.nextFloat();
         NotaProva = NovaNota2 ;
       }
       else 
@@ -59,7 +59,7 @@ public class MediaAluno{
 
       if (Alterar3 == 1){
         System.out.println("Digite a nova nota");
-        int NovaNota3 = media.nextInt();
+        float NovaNota3 = media.nextFloat();
         Nota3 = NovaNota3;
       }
       else 
@@ -70,8 +70,11 @@ public class MediaAluno{
 
     System.out.println("Informe o peso de cada nota");
 
+    System.out.println("Peso 1 :");
     float NovoPesoTrabalho = media.nextFloat();
+    System.out.println("Peso 2 :");
     float NovoPesoProva = media.nextFloat();
+    System.out.println("Peso 3  :");
     float NovoPesoNota3 = media.nextFloat();
 
     PesoTrabalho = NovoPesoTrabalho;
