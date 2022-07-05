@@ -11,9 +11,10 @@ public class MediaAluno{
     float PesoTrabalho;
     float PesoProva;
     float PesoNota3;
+    String Disciplina = "Matematica";
 
     float Status(){
-        System.out.println("Média do Aluno: ");
+        System.out.println("Média do Aluno da matéria de: " +this.Disciplina);
         System.out.println("Nota do Trabalho: " +this.NotaTrabalho);
         System.out.println("Nota da Prova: " +this.NotaProva);
         System.out.println("Terceira Nota: " +this.Nota3);
